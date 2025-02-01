@@ -1,3 +1,8 @@
+@shift /0
+@echo off
+chcp 65001
+for /f "tokens=1,2 delims=#" %%a in ('"prompt #$h#$e# & echo on & for %%b in (1) do rem"') do (set "del=%%a" & set "col=%%b")
+call :IsAdmin
 netsh winsock reset
 netsh int ip reset
 netsh advfirewall reset
